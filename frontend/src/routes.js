@@ -83,7 +83,10 @@ const BottomTabs = () => (
 
 const Drawer = createDrawerNavigator();
 const DrawerScreen = () => (
-    <Drawer.Navigator drawerContent={(props) => <Cart {...props} />}>
+    <Drawer.Navigator
+        screenOptions={{ headerShown: false }}
+        drawerContent={(props) => <Cart {...props} />}
+    >
         <Drawer.Screen name="Home" component={BottomTabs} />
     </Drawer.Navigator>
 );
@@ -112,7 +115,7 @@ const Router = ({ auth, checkAuth }) => {
         <NavigationContainer>
             {!auth.isAuthenticated
                 ? (
-                    <RootStack.Navigator>
+                    <RootStack.Navigator screenOptions={{ headerShown: false }}>
                         <RootStack.Screen name="SignIn" component={SignIn} />
                         <RootStack.Screen name="SignUp" component={SignUp} />
                         <RootStack.Screen

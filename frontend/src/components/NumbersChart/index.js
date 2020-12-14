@@ -3,7 +3,7 @@ import { Alert, Platform, StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
 import { FlatList } from 'react-native-gesture-handler';
 
-import RoundedButton from '../../components/Buttons/RoundedButton';
+import RoundedButton from '../UI/Buttons/RoundedButton';
 import { Creators as CartActions } from '../../store/ducks/cart';
 import Card from './Card';
 import CartIcon from '../Cart/Icon';

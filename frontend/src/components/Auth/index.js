@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Logo from '../Logo';
+import Logo from '../UI/Logo';
 
 const AuthContainer = ({ title, children, logo = true }) => (
     <View style={{ marginTop: logo ? 60 : 0 }}>

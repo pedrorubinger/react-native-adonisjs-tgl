@@ -6,10 +6,10 @@ import * as Yup from 'yup';
 
 import AuthContainer from '../../components/Auth';
 import AuthForm from '../../components/Auth/AuthForm';
-import Input from '../../components/Input';
-import ArrowButton from '../../components/Buttons/ArrowButton';
+import Input from '../../components/UI/Input';
+import ArrowButton from '../../components/UI/Buttons/ArrowButton';
 import { recoverPassword } from '../../services/auth';
-import ErrorMessage from '../../components/ErrorMessage';
+import ErrorMessage from '../../components/UI/ErrorMessage';
 
 const PasswordRecovery = ({ navigation }) => {
     const [isLoading, setIsLoading] = useState(false);

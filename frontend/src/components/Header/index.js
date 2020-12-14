@@ -5,7 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
 
 import { Creators as AuthActions } from '../../store/ducks/auth';
-import Logo from '../Logo';
+import Logo from '../UI/Logo';
 import CartIcon from '../Cart/Icon';
 
 const Header = ({ logout, cart, navigation }) => {
@@ -28,6 +28,7 @@ const Header = ({ logout, cart, navigation }) => {
                         onPress={() => navigation.toggleDrawer()}
                     />
                 }
+
                 <Ionicons
                     onPress={onPressExit}
                     name={prefix + '-log-out'}

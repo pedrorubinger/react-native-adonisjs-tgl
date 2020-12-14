@@ -7,7 +7,7 @@ import CartIcon from '../Cart/Icon';
 import { Creators as GameActions } from '../../store/ducks/games';
 import { Creators as CartActions } from '../../store/ducks/cart';
 import Game from '../Games/Game';
-import ArrowButton from '../Buttons/ArrowButton';
+import ArrowButton from '../UI/Buttons/ArrowButton';
 
 const Cart = ({ navigation, auth, betTypes, cart, addGames, clearCart }) => {
     const [isLoading, setIsLoading] = useState(false);

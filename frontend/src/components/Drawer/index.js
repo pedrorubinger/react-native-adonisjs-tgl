@@ -1,16 +1,14 @@
 import React from 'react';
-import { Dimensions, StyleSheet, Text, View } from 'react-native';
-import { connect } from 'react-redux';
+import { Dimensions, StyleSheet, View } from 'react-native';
 
 import NewBet from '../../pages/NewBet';
-let ScreenHeight = Dimensions.get("window").width;
-const Drawer = ({ cart }) => {
 
-    console.log(ScreenHeight);
+let ScreenHeight = Dimensions.get("window").width;
+
+const Drawer = () => {
     return (
         <View style={styles.container}>
             <View style={styles.drawer}>
-                <Text>Ola</Text>
                 <NewBet />
             </View>
         </View>
@@ -22,18 +20,13 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         width: ScreenHeight + 100,
-        backgroundColor: 'orange',
-        // justifyContent: 'flex-end'
+        backgroundColor: 'orange'
     },
 
     drawer: {
         flex: 1,
-        // position: 'absolute',
-        // height: 100,
         backgroundColor: 'red'
     }
 });
 
-const mapStateToProps = (state) => ({ cart: state.cart });
-
-export default connect(mapStateToProps)(Drawer);
+export default Drawer;

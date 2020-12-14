@@ -8,9 +8,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import AuthContainer from '../../components/Auth';
 import AuthForm from '../../components/Auth/AuthForm';
-import Input from '../../components/Input';
-import ArrowButton from '../../components/Buttons/ArrowButton';
-import ErrorMessage from '../../components/ErrorMessage';
+import Input from '../../components/UI/Input';
+import ArrowButton from '../../components/UI/Buttons/ArrowButton';
+import ErrorMessage from '../../components/UI/ErrorMessage';
 import { signIn, signUp } from '../../services/auth';
 import { Creators as AuthActions } from '../../store/ducks/auth';
 

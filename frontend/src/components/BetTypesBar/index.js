@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { StyleSheet, Text, View } from 'react-native';
 
-import RoundedButton from '../Buttons/RoundedButton';
+import RoundedButton from '../UI/Buttons/RoundedButton';
 import { Creators as BetTypesActions } from '../../store/ducks/betTypes';
 
 /**

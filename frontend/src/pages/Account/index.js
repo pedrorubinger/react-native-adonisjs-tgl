@@ -7,10 +7,10 @@ import * as Yup from 'yup';
 
 import AuthContainer from '../../components/Auth';
 import AuthForm from '../../components/Auth/AuthForm';
-import ArrowButton from '../../components/Buttons/ArrowButton';
-import ErrorMessage from '../../components/ErrorMessage';
+import ArrowButton from '../../components/UI/Buttons/ArrowButton';
+import ErrorMessage from '../../components/UI/ErrorMessage';
 import Header from '../../components/Header';
-import Input from '../../components/Input';
+import Input from '../../components/UI/Input';
 import Loading from '../../components/UI/Loading';
 import { getUserData, updateProfileData } from '../../services/auth';
 
