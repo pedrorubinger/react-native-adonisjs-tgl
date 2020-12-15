@@ -27,6 +27,8 @@ const NewBet = ({ betTypes, fetchBetTypes, setActive, navigation, activeTab }) =
         ? betTypes.data.filter((bet) => bet.id === betTypes.active[0])[0]
         : betTypes.data[0];
 
+    if(!activeTab) return null;
+
     return (
         <View style={styles.container}>
             <Header navigation={navigation} />
@@ -51,7 +53,6 @@ const NewBet = ({ betTypes, fetchBetTypes, setActive, navigation, activeTab }) =
                                     <NumbersChart
                                         betType={data}
                                         navigation={navigation}
-                                        active={betTypes.active[0]}
                                     />
                                 </View>
                             </View>

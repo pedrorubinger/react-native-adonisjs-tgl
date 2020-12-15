@@ -11,7 +11,7 @@ import Loading from '../UI/Loading';
 
 const picked = new Set();
 
-const NumbersChart = ({ betType, addToCart, navigation, betTypes }) => {
+const NumbersChart = ({ betType, addToCart, navigation }) => {
     const [isReady, setIsReady] = useState(false);
     const setUpdateCard = useState(null)[1];
     const defaultColor = '#B5C401';
@@ -34,10 +34,12 @@ const NumbersChart = ({ betType, addToCart, navigation, betTypes }) => {
     };
 
     useEffect(() => {
-        picked.clear();
-
         setIsReady(true);
-    }, [])
+
+        return () => {
+            picked.clear();
+        }
+    }, [picked]);
 
     const cardPressHandler = (item, isPicked) => {
         const selected = isPicked ? isPicked : picked.has(item);
@@ -70,7 +72,7 @@ const NumbersChart = ({ betType, addToCart, navigation, betTypes }) => {
                 }],
                 { cancelable: false }
             );
-        
+
         const game = {
             id: Date.now(),
             type,
@@ -97,7 +99,6 @@ const NumbersChart = ({ betType, addToCart, navigation, betTypes }) => {
             }
 
             <FlatList
-            removeClippedSubviews={true}
                 style={{
                     flexDirection: 'column',
                     marginTop: !!picked.size ? 10 : 0,
@@ -191,9 +192,8 @@ const styles = StyleSheet.create({
     description: { color: '#868686', fontSize: 14, fontStyle: 'italic' }
 });
 
-const mapStateToProps = (state) => ({ betTypes: state.betTypes });
 const mapDispatchToProps = (dispatch) => ({
     addToCart: (item) => dispatch(CartActions.addToCart(item))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NumbersChart);
+export default connect(null, mapDispatchToProps)(NumbersChart);
